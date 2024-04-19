@@ -1,3 +1,5 @@
+# shared-degs
+
 A function to classify genes from a set of DE-seq analyses as "shared" or not. This uses an empirical-FDR to generate a threshold of experiments. Genes that are DE in a given direction for this threshold number are considered a "shared DEG".
 
 The function takes a simple input: a table of LFC values. 

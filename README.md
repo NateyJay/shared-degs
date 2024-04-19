@@ -9,7 +9,7 @@ The function takes a simple input: a table of LFC values.
 
 This function returns a list, which contains general information on the analysis, aggregated counts of DE genes in both directions, and a summary table which includes all of the shared deg values, including a call for which direction they are DE.
 
-requirements:
+#### Requirements:
 ```
 library(reshape2)
 library(stringr)

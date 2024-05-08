@@ -129,7 +129,7 @@ get_shared_degs <- function(lfc.df, lfc_threshold=1, fdr_threshold=0.95, study_t
     
     
     
-    out.ls[[direction]][['threshold']] = which(comb.df$include)[1]
+    out.ls[[direction]][['threshold']] = rownames(comb.df)[match(T,comb.df$include)]
     out.ls[[direction]][['de.df']] <- de.df
     out.ls[[direction]][['shared_counts']] <- shared_count
     out.ls[[direction]][['sde.df']] <- sde.df
@@ -154,7 +154,7 @@ get_shared_degs <- function(lfc.df, lfc_threshold=1, fdr_threshold=0.95, study_t
   summary.df$de_call <- '-'
   summary.df$de_call[f_up] <- 'up'
   summary.df$de_call[f_down] <- 'down'
-  summary.df$de_call[f_up * f_down] <- 'up/down'
+  summary.df$de_call[f_up & f_down] <- 'up/down'
   
   out.ls$summary.df <- summary.df
   
